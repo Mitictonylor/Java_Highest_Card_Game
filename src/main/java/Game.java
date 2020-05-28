@@ -26,4 +26,26 @@ public class Game {
             }
         }
     }
+    public boolean checkDraw(){
+        boolean drawgame = true;
+        int handTotal = this.players.get(0).cardValue();
+        for(Player player: this.players){
+            if(player.cardValue() != handTotal){
+                drawgame = false;
+            }
+        }
+        return drawgame;
+    }
+
+    public Player checkWinner(){
+        int highest = 0;
+        Player winner = null;
+        for(Player player:this.players){
+            if(player.cardValue() > highest){
+                highest = player.cardValue();
+                winner = player;
+            }
+        }
+        return winner;
+    }
 }
