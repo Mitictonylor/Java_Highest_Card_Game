@@ -10,7 +10,7 @@ public class Player {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -18,10 +18,14 @@ public class Player {
     }
 
     public ArrayList<Card> getCard() {
-        return card;
+        return this.card;
     }
 
     public void setCard(ArrayList<Card> card) {
         this.card = card;
+    }
+
+    public int countCard() {
+        return this.card.size();
     }
 }
