@@ -28,4 +28,8 @@ public class Player {
     public int countCard() {
         return this.card.size();
     }
+
+    public void takeCard(Card card) {
+        this.card.add(card);
+    }
 }

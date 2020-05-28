@@ -20,4 +20,9 @@ public class PlayerTest {
     public void playerStartWithNoCards(){
         assertEquals(0, player.countCard());
     }
+    @Test
+    public void playerCanTakeACard(){
+        player.takeCard(card);
+        assertEquals(1, player.countCard());
+    }
 }
