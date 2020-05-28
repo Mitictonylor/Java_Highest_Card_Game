@@ -1,5 +1,5 @@
 public enum Rank {
-    ACE(14),
+    ACE(1),
     TWO(2),
     THREE(3),
     FOUR(4),

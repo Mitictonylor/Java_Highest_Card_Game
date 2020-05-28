@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
-    private ArrayList<Card> card;
+    private ArrayList<Card> cards;
 
     public Player(String name){
         this.name = name;
-        this.card = new ArrayList<Card>();
+        this.cards = new ArrayList<Card>();
     }
 
     public String getName() {
@@ -18,18 +18,26 @@ public class Player {
     }
 
     public ArrayList<Card> getCard() {
-        return this.card;
+        return this.cards;
     }
 
     public void setCard(ArrayList<Card> card) {
-        this.card = card;
+        this.cards = card;
     }
 
     public int countCard() {
-        return this.card.size();
+        return this.cards.size();
     }
 
     public void takeCard(Card card) {
-        this.card.add(card);
+        this.cards.add(card);
+    }
+
+    public int cardValue() {
+        int total = 0;
+        for(Card card :this.cards){
+            total += card.getValue();
+        }
+        return total;
     }
 }

@@ -24,7 +24,7 @@ public class CardTest {
 
         @Test
         public void cardHasValue() {
-            assertEquals(14, card.getValue());
+            assertEquals(1, card.getValue());
         }
 
 
