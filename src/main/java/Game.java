@@ -18,5 +18,12 @@ public class Game {
     public void addPlayer(Player player) {
         this.players.add(player);
     }
-
+    public void startTheGame(int amountOfCards){
+        for(Player player:this.players){
+            for (int i = 0; i < amountOfCards; i ++){
+                Card card = deck.giveCard();
+                player.takeCard(card);
+            }
+        }
+    }
 }

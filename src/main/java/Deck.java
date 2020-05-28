@@ -11,9 +11,7 @@ public class Deck {
         this.populateDeck();
         Collections.shuffle(this.cards);
     }
-    public int getSize(){
-        return this.cards.size();
-    }
+
 
     public void populateDeck(){
         for (Suit suit : Suit.values()){
@@ -22,5 +20,12 @@ public class Deck {
             }
         }
 
+    }
+    public Card giveCard() {
+        return this.cards.remove(0);
+    }
+
+    public int countCard() {
+        return this.cards.size();
     }
 }

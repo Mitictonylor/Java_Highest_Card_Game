@@ -28,5 +28,10 @@ public class GameTest {
     public void gameHasPlayers(){
         assertEquals(2, game.countPlayer());
     }
-
+    @Test
+    public void gameCanStart(){
+        game.startTheGame(1);
+        assertEquals(1, player1.countCard());
+        assertEquals(1, player2.countCard());
+    }
 }
